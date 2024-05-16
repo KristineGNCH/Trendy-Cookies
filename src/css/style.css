@@ -52,6 +52,7 @@ a:hover {
 	padding: 18px;
 	text-align: center;
 	cursor: pointer;
+	font-size: 18px;
 }
 
 .button:hover {
