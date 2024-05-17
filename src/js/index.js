@@ -1,7 +1,6 @@
-'use strict';
 let cources = null;
 fetch(
-  'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json'
+  'https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json',
 )
   .then((response) => response.json())
   .then((data) => {
@@ -57,9 +56,8 @@ document.getElementById('change-currency').onclick = function (e) {
   e.target.innerText = newCurrency;
 
   for (let i = 0; i < prices.length; i++) {
-    let price =
-      parseFloat(prices[i].getAttribute('data-base-price')) * coefficient;
-    prices[i].innerText = price.toFixed(1) + ' ' + newCurrency;
+    const price = parseFloat(prices[i].getAttribute('data-base-price')) * coefficient;
+    prices[i].innerText = `${price.toFixed(1)} ${newCurrency}`;
   }
 };
 

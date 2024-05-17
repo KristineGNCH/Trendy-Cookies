@@ -1,1 +1,2 @@
-import './css/style.css'
+/* eslint-disable eol-last */
+import './css/style.css';
